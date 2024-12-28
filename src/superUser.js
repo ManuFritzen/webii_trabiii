@@ -1,30 +1,30 @@
 import { PrismaClient } from '@prisma/client';
-import bcrypt from 'bcryptjs';
+import bcrypt from 'bcrypt';
 
 const prisma = new PrismaClient();
 
 export async function createSuperUser() {
     try {
         const superUser = await prisma.user.findFirst({
-            where: { email: 'manu@manu.com' }, 
+            where: { email: 'manu@manu.com' },
         });
 
         if (!superUser) {
-            const hashedPassword = await bcrypt.hash("123", 10); 
-            const newSuperUser = await prisma.user.create({
+            await prisma.user.create({
                 data: {
                     name: 'manu',
                     email: 'manu@manu.com',
-                    password: "123", 
+                    password: bcrypt.hashSync('1234', 10), 
                     role: 'SUPERUSER',
                 },
             });
-
-            console.log(`Superusuário criado com sucesso.`);
-            console.log(`Nome: ${newSuperUser.name}`);
-            console.log(`Senha: ${newSuperUser.password}`);
+            console.log('Superusuário criado com sucesso.');
+            console.log('email:' + data.email);
+            console.log('senha:' + data.password);
         } else {
             console.log('Superusuário já existe.');
+            console.log('email:' + superUser.email);
+            console.log('senha: 1234');
         }
     } catch (error) {
         console.error('Erro ao criar superusuário:', error);
@@ -32,5 +32,3 @@ export async function createSuperUser() {
         await prisma.$disconnect(); 
     }
 }
-
-

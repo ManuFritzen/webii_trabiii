@@ -10,7 +10,7 @@ generator client {
 
 datasource db {
   provider = "sqlite"
-  url      = "file:../dados.db"  // Caminho para o seu banco de dados SQLite
+  url      = "file:../dados.db"  
 }
 
 model User {

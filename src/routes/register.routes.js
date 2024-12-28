@@ -1,8 +1,12 @@
-import express from 'express';
-import {register}  from '../controllers/authController.js';
+import { Router } from 'express';
+import { register, registerPage } from '../controllers/authController.js';
 
-const router = express.Router();
+const registerRouter = Router();
 
-router.post('/register', register);  // Rota de registro
+// Rota para acessar a página de registro
+registerRouter.get('/', registerPage);
 
-export default router;
+// Rota de registro
+registerRouter.post('/', register);
+
+export default registerRouter;

@@ -1,16 +1,31 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 </head>
-<body>
-    <form action="/login" method="post">
-        <input type="text" name="username" placeholder="Username">
-        <input type="password" name="password" placeholder="Password">
-        <button type="submit">Login</button>
-    </form>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; padding: 0; box-sizing: border-box;">
+    <div class="login-container" style="display: flex; justify-content: center; align-items: center; width: 100%;">
+        <div class="login-box" style="background-color: #333; padding: 40px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center; width: 300px;">
+            <h2 style="color: #fff; margin-bottom: 20px; font-size: 24px;">Entrar</h2>
+            <form action="/login" method="POST">
+                <div class="input-group" style="margin-bottom: 20px; text-align: left;">
+                    <label for="username" style="color: #fff; display: block; margin-bottom: 5px;">Usuário</label>
+                    <input type="text" id="email" name="email" required style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px; background-color: #f4f4f4; font-size: 16px; color: #333;">
+                </div>
+                <div class="input-group" style="margin-bottom: 20px; text-align: left;">
+                    <label for="password" style="color: #fff; display: block; margin-bottom: 5px;">Senha</label>
+                    <input type="password" id="password" name="password" required style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px; background-color: #f4f4f4; font-size: 16px; color: #333;">
+                </div>
+                <div class="button-group" style="text-align: center;">
+                    <button type="submit" class="login-btn" style="background-color: #FF5722; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 18px; transition: background-color 0.3s;">Entrar</button>
+                </div>
+            </form>
+            <div style="margin-top: 20px;">
+                <a href="/register" style="color: #FF5722; font-size: 16px; text-decoration: none;">Criar uma conta</a>
+            </div>
+        </div>
+    </div>
 </body>
-
 </html>

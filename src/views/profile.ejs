@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0;">
+    <div style="width: 80%; margin: 30px auto; background-color: #fff; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px;">
+        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+            <img src="<%= user.profilePhoto ? user.profilePhoto.url : '/default-profile.jpg' %>" alt="Foto de Perfil" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-right: 20px;">
+            <div>
+                <h1 style="font-size: 24px; margin: 0;"><%= user.name %></h1>
+                <p style="color: #666;">Email: <%= user.email %></p>
+                <p style="color: #666;">Cargo: <%= user.role %></p>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <h3 style="margin: 0; color: #333;">Informações do Perfil:</h3>
+            <p><strong>Nome:</strong> <%= user.name %></p>
+            <p><strong>Email:</strong> <%= user.email %></p>
+            <p><strong>Cargo:</strong> <%= user.role %></p>
+        </div>
+
+        <div style="margin-top: 20px;">
+            <h3 style="margin: 0; color: #333;">Permissões:</h3>
+            <ul style="list-style-type: none; padding-left: 0;">
+                <% user.permissions.forEach(permission => { %>
+                    <li style="margin: 5px 0;"><span style="font-weight: bold;"><%= permission.module.name %>:</span> <%= permission.permission ? 'Permitido' : 'Negado' %></li>
+                <% }) %>
+            </ul>
+        </div>
+
+        
+        </div>
+    </div>
+</body>
+</html>

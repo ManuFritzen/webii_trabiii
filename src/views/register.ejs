@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; padding: 0; box-sizing: border-box;">
+    <div class="register-container" style="display: flex; justify-content: center; align-items: center; width: 100%;">
+        <div class="register-box" style="background-color: #333; padding: 40px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center; width: 300px;">
+            <h2 style="color: #fff; margin-bottom: 20px; font-size: 24px;">Criar Conta</h2>
+            <form action="/register" method="POST">
+                <div class="input-group" style="margin-bottom: 20px; text-align: left;">
+                    <label for="name" style="color: #fff; display: block; margin-bottom: 5px;">Nome</label>
+                    <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px; background-color: #f4f4f4; font-size: 16px; color: #333;">
+                </div>
+                <div class="input-group" style="margin-bottom: 20px; text-align: left;">
+                    <label for="email" style="color: #fff; display: block; margin-bottom: 5px;">E-mail</label>
+                    <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px; background-color: #f4f4f4; font-size: 16px; color: #333;">
+                </div>
+                <div class="input-group" style="margin-bottom: 20px; text-align: left;">
+                    <label for="password" style="color: #fff; display: block; margin-bottom: 5px;">Senha</label>
+                    <input type="password" id="password" name="password" required style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px; background-color: #f4f4f4; font-size: 16px; color: #333;">
+                </div>
+                
+                <div class="button-group" style="text-align: center;">
+                    <button type="submit" class="register-btn" style="background-color: #FF5722; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 18px; transition: background-color 0.3s;">Registrar</button>
+                </div>
+            </form>
+            <p style="color: #fff; margin-top: 20px;">Já tem uma conta? <a href="/login" style="color: #FF5722;">Entrar</a></p>
+        </div>
+    </div>
+</body>
+</html>

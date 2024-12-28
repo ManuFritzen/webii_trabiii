@@ -1,0 +1,28 @@
+{
+  "name": "webii_trabalhoiii",
+  "version": "1.0.0",
+  "description": "**Objetivo:**   Implementar um sistema web com **Express**, **Prisma** e **SQLite** para gerenciar permissões de acesso a módulos fixos. Este trabalho visa desenvolver as regras de negócio, estrutura de banco de dados e funcionalidades de backend, **não sendo foco o desenvolvimento de frontend.** O sistema deve contemplar controle de acesso, permissões personalizadas, criação de usuários, criptografia de senhas, uploads de imagens e listagem de dados.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^6.1.0",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "prisma": "^6.1.0"
+  }
+}
